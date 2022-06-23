@@ -1,53 +1,21 @@
-# Welcome to Remix!
+# Remix & WordPress with Tailwind CSS
 
-- [Remix Docs](https://remix.run/docs)
+This resource demonstrates how to implement headless WordPress with the Remix framework and styling with Tailwind CSS
 
-## Development
 
-From your terminal:
+[✍️ Read the step-by-step tutorial]()
+[📹 Watch the video]()
 
-```sh
-npm run dev
-```
+## Getting Started
+Follow along with the blog post, and run the following commands to clone this repo:
 
-This starts your app in development mode, rebuilding assets on file changes.
+    git clone https://github.com/JEverhart383/remixing-wordpress.git
+    cd remixing-wordpress
+    npm install
+    npm run dev
 
-## Deployment
 
-First, build your app for production:
+## Headless WordPress Hosting with Atlas
 
-```sh
-npm run build
-```
+WP Engine's Atlas platform provides a performant and user-friendly hosting platform for headless WordPress and Node-based JavaScript apps. [Create a free sandbox account](https://wpengine.com/atlas/) to try the platform. 
 
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
-
-### Using a Template
-
-When you ran `npx create-remix@latest` there were a few choices for hosting. You can run that again to create a new project, then copy over your `app/` folder to the new project that's pre-configured for your target server.
-
-```sh
-cd ..
-# create a new project, and pick a pre-configured host
-npx create-remix@latest
-cd my-new-remix-app
-# remove the new project's app (not the old one!)
-rm -rf app
-# copy your app over
-cp -R ../my-old-remix-app/app app
-```
