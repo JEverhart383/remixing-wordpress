@@ -2,7 +2,7 @@ import { Link } from "@remix-run/react"
 
 export default function Post({post}){
     return (
-        <Link to={`/posts/${post.slug}`}>
+        <Link prefetch="intent" to={`/posts/${post.slug}`}>
             <div className="flex 
             items-center 
             bg-gradient-to-r
