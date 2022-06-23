@@ -1,10 +1,28 @@
 import Post from "../components/Post"
 import Header from "../components/Header"
-import { useLoaderData } from "@remix-run/react";
-import { getPosts } from "../../lib/WordPressService"
+import { useLoaderData } from "@remix-run/react"
+import { gql } from "@apollo/client"
+import { client }  from "../lib/apollo"
 
 export async function loader (){
-  return await getPosts()
+  const PostsQuery = gql`
+        query GetPosts {
+            posts {
+                nodes {
+                    title
+                    content
+                    date
+                    slug
+                }
+            }
+        }
+    `
+    const response = await client.query({
+        query: PostsQuery
+    })
+
+    const posts = response?.data?.posts?.nodes
+    return posts
 }
 
 

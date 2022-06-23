@@ -1,10 +1,30 @@
-import { useLoaderData } from "@remix-run/react";
-import { getPostBySlug } from "../../../lib/WordPressService"
 import Header from "../../components/Header"
+import { useLoaderData } from "@remix-run/react";
+import { gql } from "@apollo/client"
+import { client }  from "../../lib/apollo"
 
 export async function loader ({params}) {
   const slug = params.slug
-  return await getPostBySlug(slug)
+  const PostQuery = gql`
+    query GetPostBySlug($id: ID!) {
+        post(id: $id, idType: SLUG) {
+            date
+            content
+            title
+            slug
+        }
+    }
+  `
+
+  const response = await client.query({
+    query: PostQuery,
+    variables: {
+        id: slug
+    }
+  })
+
+  const post = response?.data?.post
+  return post
 }
 
 export default function Index() {
