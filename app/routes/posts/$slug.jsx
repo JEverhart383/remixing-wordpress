@@ -27,7 +27,7 @@ export async function loader ({params}) {
   return post
 }
 
-export default function Index() {
+export default function Slug() {
   const post = useLoaderData()
   return (
     <div>
