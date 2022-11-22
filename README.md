@@ -3,8 +3,8 @@
 This resource demonstrates how to implement headless WordPress with the Remix framework and styling with Tailwind CSS
 
 
-[✍️ Read the step-by-step tutorial]()
-[📹 Watch the video]()
+[✍️ Read the step-by-step tutorial](https://developers.wpengine.com/blog/headless-wordpress-with-remix-and-tailwind-css)
+[📹 Watch the video](https://www.youtube.com/watch?v=4jT7iKdqoW4)
 
 ## Getting Started
 Follow along with the blog post, and run the following commands to clone this repo:
